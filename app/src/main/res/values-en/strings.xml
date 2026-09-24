@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">兰天浩 2024110515</string>
+    <string name="greeting">Hello, World!</string>
+    <string name="tap_hint">Tap a button below to switch language</string>
+    <string name="btn_chinese">中文</string>
+    <string name="btn_english">English</string>
+    <string name="btn_portuguese">Português</string>
+</resources>
