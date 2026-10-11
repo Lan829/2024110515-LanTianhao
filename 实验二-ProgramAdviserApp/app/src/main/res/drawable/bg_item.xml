@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 动态生成的 TextView 的背景（区 1 使用） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/item_background" />
+    <corners android:radius="6dp" />
+</shape>

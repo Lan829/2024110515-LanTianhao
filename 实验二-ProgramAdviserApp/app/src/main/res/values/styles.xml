@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 功能区卡片 -->
+    <style name="ZoneCard">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- 功能区标题 -->
+    <style name="ZoneTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <!-- 功能区说明文字 -->
+    <style name="ZoneDesc">
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/secondary_text</item>
+    </style>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用标题：姓名 + 学号 -->
+    <string name="app_name">兰天浩 2024110515</string>
+
+    <!-- ==================== 区 1：动态添加 TextView ==================== -->
+    <string name="zone1_title">区 1：代码动态添加 TextView</string>
+    <string name="zone1_desc">在输入框输入内容后点击「添加」，程序会用代码创建 TextView 并加入到 ScrollView 内部的 LinearLayout，内容超出高度时可以上下滚动查看。</string>
+    <string name="zone1_input_hint">请输入要添加的内容</string>
+    <string name="btn_add">添加</string>
+    <string name="btn_clear">清空</string>
+    <string name="zone1_count_empty">尚未添加内容</string>
+    <string name="zone1_count_format">已添加 %1$d 条</string>
+    <string name="zone1_item_format">第 %1$d 条：%2$s</string>
+    <string name="toast_input_empty">请先输入要添加的内容</string>
+    <string name="toast_nothing_to_clear">列表已经是空的</string>
+    <string name="toast_cleared">已清空全部内容</string>
+
+    <!-- ==================== 区 2：ProgramAdviser ==================== -->
+    <string name="zone2_title">区 2：ProgramAdviser（MVC 交互咨询）</string>
+    <string name="zone2_desc">输入编程主题关键字后点击「咨询」，Controller 会调用 Model 查询规则，再把查询到的建议返回给界面显示。</string>
+    <string name="zone2_input_hint">请输入要咨询的编程主题</string>
+    <string name="btn_ask">咨询</string>
+    <string name="zone2_shortcut_tip">快捷主题：</string>
+    <string name="zone2_result_initial">还没有查询结果。输入主题后点击「咨询」，也可以直接点上面的快捷主题按钮。</string>
+    <string name="zone2_result_format">【%1$s】\n%2$s</string>
+    <string name="zone2_result_empty_query">请先输入要咨询的主题。</string>
+    <string name="zone2_result_not_found">暂时没有收录「%1$s」这个主题，可以试试下面的快捷主题。</string>
+
+    <!-- ==================== Model 层的规则数据 ==================== -->
+    <!-- 主题关键字与建议一一对应，通过下标配对 -->
+    <string-array name="adviser_topic_keys">
+        <item>循环</item>
+        <item>函数</item>
+        <item>数组</item>
+        <item>字符串</item>
+        <item>类与对象</item>
+        <item>继承</item>
+        <item>空指针</item>
+        <item>异常</item>
+        <item>集合</item>
+        <item>MVC</item>
+    </string-array>
+
+    <string-array name="adviser_topic_advices">
+        <item>重复的工作交给循环：次数已知用 for (i in 0 until n)，遍历集合用 for (item in list)。不要在循环体里修改循环变量，并保证循环一定能结束，避免死循环。</item>
+        <item>把重复代码抽成函数，函数名用动词（例如 calculateSum）。一个函数只做一件事，参数不宜超过 4 个，尽量通过返回值而不是修改全局变量来传递结果。</item>
+        <item>数组长度固定，常用 IntArray、DoubleArray；需要增删元素时改用 MutableList。遍历优先使用 for-in，需要下标时用 indices 或 withIndex()。</item>
+        <item>Kotlin 用模板字符串拼接变量更清晰；比较字符串内容用 ==（等价于 equals），不要用 ===。字符串本身不可变，频繁拼接请改用 StringBuilder。</item>
+        <item>类把数据和行为封装在一起：属性描述状态，方法描述行为。只用来存放数据的类用 data class，可以自动生成 equals、hashCode 和 toString。</item>
+        <item>优先使用组合而不是继承。描述「能做什么」用接口，需要复用实现时才用抽象类；子类重写父类的方法要加 override 关键字。</item>
+        <item>Kotlin 用可空类型把空指针问题提前到编译期：可能为空就用 ?. 和 ?: 处理，尽量避免 !!，确实要使用时写清楚原因。</item>
+        <item>可预期的错误用 try/catch 处理，捕获后要给出提示或兜底值，不要「吞掉」异常；不可恢复的错误应尽早抛出，方便定位问题。</item>
+        <item>map 负责转换、filter 负责过滤、forEach 负责遍历、any 和 all 负责判断，用高阶函数代替手写循环，代码更短也更不容易出错。</item>
+        <item>MVC 三层分工：Model 只负责数据与业务规则，View 只负责显示，Controller 负责接收交互、调用 Model 并把结果交给 View，这样逻辑才能复用和单独测试。</item>
+    </string-array>
+</resources>

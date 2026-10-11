@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主界面：上下两个功能区
+     区 1 = 动态添加 TextView（ScrollView 嵌套 LinearLayout）
+     区 2 = ProgramAdviser 交互咨询（MVC） -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_background"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <!-- ==================== 区 1 ==================== -->
+    <LinearLayout
+        android:id="@+id/zone1Card"
+        style="@style/ZoneCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvZone1Title"
+            style="@style/ZoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zone1_title" />
+
+        <TextView
+            android:id="@+id/tvZone1Desc"
+            style="@style/ZoneDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zone1_desc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etZone1Input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/zone1_input_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAddText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:minWidth="72dp"
+                android:text="@string/btn_add"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <!-- 实验要求的关键结构：ScrollView 嵌套 LinearLayout，
+             动态生成的 TextView 都添加到 containerZone1 里 -->
+        <ScrollView
+            android:id="@+id/scrollZone1"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_scroll_area"
+            android:padding="8dp"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/containerZone1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnClearZone1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="72dp"
+                android:text="@string/btn_clear"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tvZone1Count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/zone1_count_empty"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ==================== 区 2 ==================== -->
+    <LinearLayout
+        android:id="@+id/zone2Card"
+        style="@style/ZoneCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvZone2Title"
+            style="@style/ZoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zone2_title" />
+
+        <TextView
+            android:id="@+id/tvZone2Desc"
+            style="@style/ZoneDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zone2_desc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etZone2Input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/zone2_input_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnAsk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:minWidth="72dp"
+                android:text="@string/btn_ask"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zone2_shortcut_tip"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp" />
+
+            <!-- 快捷主题按钮由代码动态生成后加到这里 -->
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/containerShortcuts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollZone2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_scroll_area"
+            android:padding="10dp"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/tvZone2Result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/zone2_result_initial"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
