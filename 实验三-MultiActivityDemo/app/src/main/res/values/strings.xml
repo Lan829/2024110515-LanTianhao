@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">兰天浩2024110515</string>
+
+    <!-- 学生信息：作为正向传参的数据来源 -->
+    <string name="student_name">兰天浩</string>
+    <string name="student_number">2024110515</string>
+
+    <!-- MainActivity -->
+    <string name="main_welcome">Android 多 Activity 实验演示</string>
+    <string name="main_hint">请选择要演示的功能：</string>
+    <string name="btn_first">1. 正向传参</string>
+    <string name="btn_second">2. 输入并返回数据</string>
+    <string name="btn_third">3. 隐式调用系统相机拍照</string>
+    <string name="btn_fourth">4. 秒表（横竖屏连续计时）</string>
+    <string name="main_result_label">返回结果：</string>
+    <string name="main_result_empty">暂无返回结果</string>
+    <string name="main_result_format">返回结果：%1$s</string>
+
+    <!-- FirstActivity：接收参数 -->
+    <string name="first_title">正向传参</string>
+    <string name="first_message_format">接收到的参数：\n姓名：%1$s\n学号：%2$s</string>
+    <string name="unknown_value">未知</string>
+
+    <!-- SecondActivity：返回数据 -->
+    <string name="second_title">返回数据</string>
+    <string name="second_hint">请输入要返回给 MainActivity 的内容</string>
+    <string name="second_confirm">确定并返回</string>
+    <string name="second_empty_warning">输入内容不能为空</string>
+
+    <!-- ThirdActivity：隐式调用相机 -->
+    <string name="third_title">调用系统相机拍照</string>
+    <string name="third_take_photo">拍照</string>
+    <string name="third_tip_empty">点击“拍照”按钮，将通过隐式 Intent 启动系统相机</string>
+    <string name="third_tip_success">拍照成功，照片已显示在下方</string>
+    <string name="third_photo_desc">拍照得到的照片</string>
+    <string name="third_no_camera">未找到可用的相机应用</string>
+    <string name="third_create_file_failed">创建照片文件失败</string>
+    <string name="third_camera_failed">拍照未完成或已取消</string>
+
+    <!-- FourthActivity：秒表 -->
+    <string name="fourth_title">秒表</string>
+    <string name="fourth_start">开始</string>
+    <string name="fourth_pause">暂停</string>
+    <string name="fourth_reset">重置</string>
+    <string name="fourth_time_initial">00:00.00</string>
+    <string name="fourth_time_format">%1$02d:%2$02d.%3$02d</string>
+    <string name="fourth_tip">旋转屏幕后计时会继续，不会归零</string>
+</resources>
