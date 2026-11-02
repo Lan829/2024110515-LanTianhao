@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用标题：姓名 + 学号 -->
+    <string name="app_name">兰天浩2024110515</string>
+
+    <!-- 各界面标题 -->
+    <string name="title_person_info">修改个人信息</string>
+    <string name="title_card_game">翻牌游戏</string>
+
+    <!-- 主界面 -->
+    <string name="desc_avatar">玩家头像</string>
+    <string name="label_name">姓名：</string>
+    <string name="label_gender">性别：</string>
+    <string name="label_student_id">学号：</string>
+    <string name="label_phone">电话：</string>
+    <string name="label_email">邮件地址：</string>
+    <string name="label_hobbies">爱好：</string>
+    <string name="label_high_score">游戏最高分：</string>
+    <string name="action_edit_info">修改个人信息</string>
+    <string name="action_play_game">翻牌游戏</string>
+    <string name="points_format">%1$d 分</string>
+
+    <!-- 默认玩家资料（可在个人信息界面修改） -->
+    <string name="default_player_name">兰天浩</string>
+    <string name="default_player_gender_male">男</string>
+    <string name="default_player_gender_female">女</string>
+    <string name="default_student_id">2024110515</string>
+    <string name="default_phone">138 0000 0000</string>
+    <string name="default_email">lan829@example.com</string>
+    <string name="default_hobbies">阅读、游戏</string>
+    <string name="hobby_separator">、</string>
+
+    <!-- 个人信息界面 -->
+    <string name="hint_name">姓名</string>
+    <string name="hint_student_id">学号</string>
+    <string name="hint_phone">电话号码</string>
+    <string name="hint_email">电子邮件地址</string>
+    <string name="hobby_travel">旅游</string>
+    <string name="hobby_reading">阅读</string>
+    <string name="hobby_game">游戏</string>
+    <string name="hobby_shopping">购物</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">取消</string>
+    <string name="desc_change_avatar">更换头像</string>
+    <string name="title_pick_avatar">选择头像</string>
+    <string name="error_name_required">请填写姓名</string>
+    <string name="error_student_id_required">请填写学号</string>
+    <string name="error_no_gallery">没有找到可用的相册应用</string>
+
+    <!-- 翻牌游戏界面 -->
+    <string name="score_format">得分：%1$d</string>
+    <string name="action_reset">重置游戏</string>
+    <string name="action_exit">退出</string>
+    <string name="card_back_symbol">?</string>
+    <string name="card_face_format">%1$s%2$s</string>
+    <string name="toast_game_over">全部配对完成，本局得分：%1$d</string>
+    <string name="toast_high_score">新的最高分：%1$d</string>
+    <string name="desc_card_hidden">未翻开的牌</string>
+    <string name="desc_card_face">%1$s</string>
+</resources>
