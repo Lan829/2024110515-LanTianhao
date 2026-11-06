@@ -7,7 +7,7 @@ Android 移动应用开发 实验五：在实验四基础上，用 RecyclerView 
 
 | 要求 | 实现 |
 | --- | --- |
-| git 新建分支 Dev，在 Dev 分支完成并提交（同一仓库两个分支 Main / Dev） | 代码与报告提交在 `Dev` 分支，`Main` 分支保持实验四版本 |
+| git 新建分支 Dev，在 Dev 分支完成并提交（同一仓库两个分支 Main / Dev） | 代码与报告提交在 `Dev` 分支，`Main` 分支通过 Pull Request 合并 |
 | 修改分支权限，Main 禁止直接 push，通过 PR 审核合并 | GitHub 上设置 `Main` 分支保护（Require a pull request before merging），实验五通过 Pull Request 合并 |
 | MainActivity 添加菜单，点击弹出关于对话框 | 选项菜单「关于」，使用 `MaterialAlertDialogBuilder` 显示应用信息 |
 | RecyclerView 实现 24 张牌，界面规整美观 | 竖屏 `GridLayoutManager` 4 列 × 6 行 = 24 张；横屏 8 列 × 4 行 = 32 张 |
