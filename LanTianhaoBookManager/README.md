@@ -8,6 +8,7 @@
 | 题目 | 实现一个由两个 Activity 组成的书籍信息管理 APP |
 | 仓库 | https://github.com/Lan829/2024110515-LanTianhao |
 | 工程目录 | `LanTianhaoBookManager`（项目名包含姓名拼音） |
+| 开发语言 | Kotlin 1.7.10（项目源码全部为 `.kt`） |
 | 文字颜色 | 学号尾号 **5** → **蓝色**（`#0000FF`，深色模式为 `#82B1FF`） |
 | 编译 / 目标 SDK | 33（Android 13） |
 | 最低运行版本 | 24（Android 7.0） |
@@ -17,12 +18,12 @@
 | 试题要求 | 实现位置 |
 | --- | --- |
 | 项目名包含姓名拼音 | `settings.gradle`：`rootProject.name = "LanTianhaoBookManager"` |
-| 书籍类（书名、作者、出版社、价格等） | `model/Book.java`，另扩展 ISBN、类别、出版年份、评分、简介 |
-| 第 1 个 Activity 在代码中新建多个书籍对象并放入数组 | `data/BookRepository.java`：`private static final Book[] BOOKS = {...}`（14 本） |
-| 对数组中的书籍按价格从低到高排序 | `model/BookSorter.java` + `SortOption.PRICE_ASC`，`MainActivity` 启动时排序 |
-| 采用列表显示书籍 | `RecyclerView` + `ui/BookAdapter.java` + `item_book.xml` |
+| 书籍类（书名、作者、出版社、价格等） | `model/Book.kt`，另扩展 ISBN、类别、出版年份、评分、简介 |
+| 第 1 个 Activity 在代码中新建多个书籍对象并放入数组 | `data/BookRepository.kt`：`private val BOOKS: Array<Book> = arrayOf(...)`（14 本） |
+| 对数组中的书籍按价格从低到高排序 | `model/BookSorter.kt` + `SortOption.PRICE_ASC`，`MainActivity` 启动时排序 |
+| 采用列表显示书籍 | `RecyclerView` + `ui/BookAdapter.kt` + `item_book.xml` |
 | 单击书籍启动第 2 个 Activity | `MainActivity#openDetail()` 通过 `Intent` 传递 `Book` |
-| 第 2 个 Activity 显示完整信息 | `ui/DetailActivity.java` + `activity_detail.xml` |
+| 第 2 个 Activity 显示完整信息 | `ui/DetailActivity.kt` + `activity_detail.xml` |
 | 第 1 个 Activity 标题为“姓名+学号” | `strings.xml`：`main_title = 兰天浩2024110515` |
 | 界面布局合理、代码规范 | Material 组件、资源文件统一管理、分层结构、25 个单元测试 |
 | APP 文字颜色按学号尾号设置 | 尾号 5 → 蓝色：`values/colors.xml`、`values-night/colors.xml`、`themes.xml` 全局设置 |
@@ -80,33 +81,35 @@ LanTianhaoBookManager/
 
 ### 1. 在代码中创建书籍数组
 
-```java
-private static final Book[] BOOKS = {
-        new Book("Java编程思想（第4版）", "Bruce Eckel", "机械工业出版社", 108.00,
-                "9787111213826", "计算机", 2007, 9.1f, "……"),
-        new Book("活着", "余华", "作家出版社", 28.00,
-                "9787506365437", "文学", 2012, 9.4f, "……"),
-        // 共 14 本
-};
+```kotlin
+private val BOOKS: Array<Book> = arrayOf(
+    Book("Java编程思想（第4版）", "Bruce Eckel", "机械工业出版社", 108.00,
+        "9787111213826", "计算机", 2007, 9.1f, "……"),
+    Book("活着", "余华", "作家出版社", 28.00,
+        "9787506365437", "文学", 2012, 9.4f, "……"),
+    // 共 14 本
+)
 ```
 
 ### 2. 按价格从低到高排序
 
-```java
-Comparator<Book> byTitle =
-        Comparator.comparing(Book::getTitle, String.CASE_INSENSITIVE_ORDER);
-Comparator<Book> byPriceAsc =
-        Comparator.comparingDouble(Book::getPrice).thenComparing(byTitle);
-Collections.sort(books, byPriceAsc);
+```kotlin
+val byTitle = Comparator<Book> { first, second ->
+    String.CASE_INSENSITIVE_ORDER.compare(first.title, second.title)
+}
+val byPriceAsc = Comparator<Book> { first, second ->
+    first.price.compareTo(second.price)
+}.thenComparing(byTitle)
+books.sortWith(byPriceAsc)
 ```
 
 ### 3. 列表点击进入第 2 个 Activity
 
-```java
-private void openDetail(Book book) {
-    Intent intent = new Intent(this, DetailActivity.class);
-    intent.putExtra(DetailActivity.EXTRA_BOOK, book);
-    startActivity(intent);
+```kotlin
+private fun openDetail(book: Book) {
+    val intent = Intent(this, DetailActivity::class.java)
+    intent.putExtra(DetailActivity.EXTRA_BOOK, book)
+    startActivity(intent)
 }
 ```
 
