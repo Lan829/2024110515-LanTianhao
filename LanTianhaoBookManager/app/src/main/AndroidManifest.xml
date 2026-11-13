@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LanTianhaoBookManager">
+
+        <!-- 第 1 个 Activity：书籍列表 -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:label="@string/main_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 第 2 个 Activity：书籍详情 -->
+        <activity
+            android:name=".ui.DetailActivity"
+            android:exported="false"
+            android:label="@string/detail_title"
+            android:parentActivityName=".ui.MainActivity" />
+    </application>
+
+</manifest>
