@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">兰天浩书籍管理</string>
+    <!-- 第 1 个 Activity 标题：姓名 + 学号 -->
+    <string name="main_title">兰天浩2024110515</string>
+    <string name="detail_title">书籍详情</string>
+
+    <string name="search_hint">搜索书名、作者、出版社或 ISBN</string>
+    <string name="summary_format">当前 %1$d 本 · 总价 %2$s · 均价 %3$s</string>
+
+    <string name="sort_price_asc">价格：从低到高</string>
+    <string name="sort_price_desc">价格：从高到低</string>
+    <string name="sort_title">书名：A → Z</string>
+    <string name="sort_label_price_asc">价格升序</string>
+    <string name="sort_label_price_desc">价格降序</string>
+    <string name="sort_label_title">书名排序</string>
+    <string name="sort_with_favorites">%1$s · 只看收藏</string>
+
+    <string name="action_sort">排序</string>
+    <string name="action_favorites">只看收藏</string>
+    <string name="action_about">关于</string>
+
+    <string name="empty_title">没有找到符合条件的图书</string>
+    <string name="empty_subtitle">换个关键词，或关闭“只看收藏”再试试</string>
+
+    <string name="book_meta_format">%1$s · %2$s</string>
+    <string name="cd_favorite">收藏《%1$s》</string>
+    <string name="cd_unfavorite">取消收藏《%1$s》</string>
+    <string name="cd_back">返回</string>
+
+    <string name="section_book_info">图书信息</string>
+    <string name="section_description">内容简介</string>
+    <string name="label_publisher">出版社</string>
+    <string name="label_isbn">ISBN</string>
+    <string name="label_year">出版年份</string>
+    <string name="label_category">类别</string>
+    <string name="label_price">价格</string>
+    <string name="author_format">作者：%1$s</string>
+    <string name="year_format">%1$d 年</string>
+    <string name="rating_format">评分 %1$.1f</string>
+
+    <string name="favorite">收藏</string>
+    <string name="favorited">已收藏</string>
+    <string name="share">分享</string>
+    <string name="share_chooser">分享书籍信息</string>
+    <string name="share_text_format">《%1$s》\n作者：%2$s\n出版社：%3$s\n价格：%4$s\nISBN：%5$s\n\n%6$s</string>
+
+    <string name="about_title">关于本应用</string>
+    <string name="about_message">兰天浩书籍管理\n姓名：兰天浩　学号：2024110515\n\n学号尾号 5 → 文字颜色：蓝色\n\n功能：价格升序 / 降序 / 书名排序、关键词搜索、收藏与只看收藏、书籍详情分享、深色模式适配。</string>
+    <string name="ok">知道了</string>
+</resources>

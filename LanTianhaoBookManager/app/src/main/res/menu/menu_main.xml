@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/action_sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_price_asc"
+                    android:checked="true"
+                    android:title="@string/sort_price_asc" />
+                <item
+                    android:id="@+id/sort_price_desc"
+                    android:title="@string/sort_price_desc" />
+                <item
+                    android:id="@+id/sort_title"
+                    android:title="@string/sort_title" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_favorites"
+        android:checkable="true"
+        android:icon="@drawable/ic_star_border"
+        android:title="@string/action_favorites"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/ic_info"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
+</menu>

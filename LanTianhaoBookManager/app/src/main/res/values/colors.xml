@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 学号 2024110515 尾号为 5 → 按试题要求使用蓝色文字 -->
+    <color name="text_blue">#0000FF</color>
+    <color name="text_blue_secondary">#1565C0</color>
+
+    <color name="brand_blue">#1565C0</color>
+    <color name="brand_blue_dark">#0D47A1</color>
+    <color name="blue_soft">#E8F0FE</color>
+    <color name="screen_background">#F6F8FC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="divider">#C9D8F0</color>
+    <color name="star_off">#8FAFC9</color>
+    <color name="white">#FFFFFF</color>
+</resources>

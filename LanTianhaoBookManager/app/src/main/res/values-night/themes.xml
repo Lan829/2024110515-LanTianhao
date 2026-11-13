@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LanTianhaoBookManager" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brand_blue</item>
+        <item name="colorPrimaryVariant">@color/brand_blue_dark</item>
+        <item name="colorOnPrimary">@color/screen_background</item>
+        <item name="colorSecondary">@color/brand_blue</item>
+        <item name="colorOnSecondary">@color/screen_background</item>
+
+        <item name="android:windowBackground">@color/screen_background</item>
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:textColorPrimary">@color/text_blue</item>
+        <item name="android:textColorSecondary">@color/text_blue_secondary</item>
+        <item name="colorOnBackground">@color/text_blue</item>
+        <item name="colorOnSurface">@color/text_blue</item>
+        <item name="colorControlNormal">@color/brand_blue</item>
+        <item name="colorControlActivated">@color/brand_blue</item>
+
+        <item name="android:statusBarColor">@color/screen_background</item>
+        <item name="android:navigationBarColor">@color/screen_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
