@@ -1,0 +1,12 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+build/
+/captures
+.externalNativeBuild
+.cxx
+
+# Windows 快捷方式
+*.lnk

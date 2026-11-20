@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用标题：姓名 + 学号 -->
+    <string name="app_name">兰天浩2024110515</string>
+
+    <string name="title_music">音乐播放</string>
+    <string name="now_playing">正在播放</string>
+    <string name="no_song">尚未选择歌曲</string>
+    <string name="no_music">未找到音乐文件，请先向设备添加音乐</string>
+    <string name="unknown_artist">未知艺术家</string>
+    <string name="unknown_song">未知歌曲</string>
+    <string name="song_count">共 %1$d 首歌曲</string>
+
+    <string name="action_play">播放</string>
+    <string name="action_pause">暂停</string>
+    <string name="action_stop">停止</string>
+    <string name="action_previous">上一首</string>
+    <string name="action_next">下一首</string>
+    <string name="action_about">关于</string>
+    <string name="action_ok">确定</string>
+
+    <string name="about_title">关于音乐播放器</string>
+    <string name="about_message">基于 Service 的音乐播放器\n应用标题：%1$s\n开发者：兰天浩 2024110515\n功能：ContentResolver 扫描音乐、Service 播放、SeekBar 进度、Notification 通知</string>
+
+    <string name="permission_denied">未授予读取音频权限，无法加载音乐</string>
+    <string name="notification_channel_name">音乐播放</string>
+    <string name="notification_channel_description">显示当前播放的歌曲</string>
+    <string name="time_format">%1$s / %2$s</string>
+
+    <string name="desc_music_note">音乐</string>
+    <string name="desc_play">播放</string>
+    <string name="desc_pause">暂停</string>
+</resources>
